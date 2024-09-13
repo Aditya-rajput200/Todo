@@ -6,8 +6,9 @@ const mongoose = require('mongoose');
 app.use(cors());   
 app.use(express.json());
 const Port =process.env.PORT || 3000 
-
-
+//delayering theroutes
+const authRoutes = require('./routes/authRoutes');
+app.use("/api", authRoutes);
 // connecting to the db
 mongoose.connect(URI=process.env.Mongodb_Uri, {
     useNewUrlParser: true,
@@ -18,4 +19,4 @@ mongoose.connect(URI=process.env.Mongodb_Uri, {
 
 app.listen(Port,(req,res)=>{
     console.log(`Your Server is Listen on ${Port}`)
-})
+}) 

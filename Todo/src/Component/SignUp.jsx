@@ -6,7 +6,7 @@ function SignUp() {
     
     <div className="signup">
         <h1>SignUp</h1>
-        <form>
+        <form onSubmit={handelSignUp} >
             <label>Username:</label><br/>
             <input type="text" name="username" required/>
             <br/>

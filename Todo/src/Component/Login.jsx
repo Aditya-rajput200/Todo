@@ -5,7 +5,7 @@ function auth() {
     <>
     <div className="login">
         <h1>Login</h1>
-        <form>
+        <form onSubmit={handelLogin}>
             <label>Username:</label><br/>
             <input type="text" name="username" required/>
             <br/>
